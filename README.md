@@ -1,1 +1,1 @@
-Repo with examples and notes for Github Actions
+Repo with examples and notes for Github Actions.
