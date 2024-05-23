@@ -14,4 +14,4 @@ jobs:
                 echo "fail"
                 exit 1
             - name: say goodbye
-            run: echo "bye"
+              run: echo "bye"
