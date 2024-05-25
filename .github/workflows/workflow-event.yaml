@@ -1,7 +1,7 @@
 name: workflow event
 
 on:
-    - workflow_dispatch
+  - workflow_dispatch
 jobs:
     echo:
         runs-on: ubuntu-latest
