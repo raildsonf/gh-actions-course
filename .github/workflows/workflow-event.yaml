@@ -4,8 +4,6 @@ on:
     workflow_dispatch: #trigger in the UI
     push:
     pull_request:
-    schedule:
-        - cron: "*/5 * * * *"
 
 jobs:
     echo:
