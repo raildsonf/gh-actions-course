@@ -2,9 +2,6 @@ name: workflow event
 
 on:
     workflow_dispatch: #trigger in the UI
-    push:
-    pull_request:
-
 jobs:
     echo:
         runs-on: ubuntu-latest
