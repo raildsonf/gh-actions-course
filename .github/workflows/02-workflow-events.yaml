@@ -1,10 +1,19 @@
 name: workflow events
 
-on: push
+#Valid too
+#on: 
+#   - push
+#   - pull_request
+
+on: 
+  push:
+  pull_request:
+  schedule:
+    - cron: "*/5 * * * *"
 
 jobs:
     echo:
         runs-on: ubuntu-latest
         steps:
           - name: show the trigger name
-            run: echo "triggered by ${{ github.event_name }}"
+            run: echo "triggered by ${{ github.event_name }}" #will show push
