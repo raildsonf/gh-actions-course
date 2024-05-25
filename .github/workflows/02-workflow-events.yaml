@@ -10,7 +10,7 @@ on:
   pull_request:
   schedule:
     - cron: "*/5 * * * *"
-  workflow_dispatch: #trigger in the ui
+  workflow_dispatch:
 
 jobs:
     echo:
