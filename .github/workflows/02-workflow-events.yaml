@@ -6,7 +6,7 @@ name: workflow events
 #   - pull_request
 
 on:
-    workflow_dispatch:
+    workflow_dispatch: {}
     push:
     pull_request:
     schedule:
