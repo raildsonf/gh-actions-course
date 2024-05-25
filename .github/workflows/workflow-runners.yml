@@ -3,10 +3,25 @@ name: workflow runners
 on:
   - push
 jobs:
-    echo:
+    ubuntu-echo:
         runs-on: ubuntu-latest
         steps:
           - name: show OS
             run: | #multiline script
-              echo "Running on ubuntu"
+              echo "Checking OS..."
               echo "Runner OS: $RUNNER_OS"
+    win-echo:
+        runs-on: windows-latest
+        steps:
+          - name: show OS
+            run: | #multiline script
+              echo "Checking OS..."
+              echo "Runner OS: $RUNNER_OS"
+    mac-echo:
+        runs-on: mac-latest
+        steps:
+          - name: show OS
+            run: | #multiline script
+              echo "Checking OS..."
+              echo "Runner OS: $RUNNER_OS"
+    
