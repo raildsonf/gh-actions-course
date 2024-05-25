@@ -1,7 +1,7 @@
 name: workflow event
 
 on:
-    workflow_dispatch: {}
+    workflow_dispatch: #trigger in the UI
     push:
     pull_request:
     schedule:
