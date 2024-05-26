@@ -1,4 +1,5 @@
 name: contexts
+run-name: runner context ${{ github.api_url}}
 on: push
 jobs:
     echo-data:
@@ -16,8 +17,6 @@ jobs:
                 echo "Repo ID: ${{ github.repository_id }}"
                 echo "Repo: ${{ github.repository }}"
                 echo "Token: ${{ github.token }}"
-                echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-                echo "SHORT_SHA= ${{ steps.vars.outputs.sha_short }}"
             - name: retrieve variable
               run: |
                 echo "Variable value: ${{ vars.CLOUD_CREDS }}"
