@@ -31,5 +31,7 @@ jobs:
               run: |
                 echo "Variable value: ${{ vars.CLOUD_CREDS }}"
             - name: print env vars
+              env:
+                CHECK_API: 'true2'
               run: |
                 echo "My var ${{ env.CHECK_API }}"
