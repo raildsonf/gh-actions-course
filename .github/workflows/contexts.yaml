@@ -1,6 +1,12 @@
 name: contexts
-run-name: runner context ${{ github.api_url}}
-on: push
+run-name: workflow run name in the UI ${{ github.head_ref }}. Debug ${{ inputs.debug }}
+on:
+    push:
+    workflow_dispatch:
+        inputs:
+            debug:
+                type: boolean
+                default: false
 jobs:
     echo-data:
         runs-on: ubuntu-latest
