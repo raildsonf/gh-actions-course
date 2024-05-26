@@ -7,9 +7,13 @@ on:
             debug:
                 type: boolean
                 default: false
+env:
+    CHECK_API: 'true1'
 jobs:
     echo-data:
         runs-on: ubuntu-latest
+        env:
+            CHECK_API: 'false1'
         steps:
             - name: display information
               run: |
@@ -26,3 +30,6 @@ jobs:
             - name: retrieve variable
               run: |
                 echo "Variable value: ${{ vars.CLOUD_CREDS }}"
+            - name: print env vars
+              run: |
+                echo "My var ${{ env.CHECK_API }}"
