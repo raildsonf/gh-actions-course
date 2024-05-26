@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         defaults: #pass default configs to all job
             run:
-                working-directory: using-actions/react/app #set working-directory key word to react app folder wo we can install deps and run test
+                working-directory: using-actions/react-app #set working-directory key word to react app folder wo we can install deps and run test
         steps:
             - name: checkout the code from repo
               uses: actions/checkout@v4 #uses key word defines the action, v4 is the action version
