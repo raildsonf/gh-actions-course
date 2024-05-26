@@ -2,8 +2,7 @@ name: event filters and activity types
 on:
     pull_request:
         types:
-            - opened
-            - synchronize
+            - closed
         branches:
             - main
 jobs:
