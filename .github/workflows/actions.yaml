@@ -10,7 +10,7 @@ jobs:
             - name: checkout the code from repo
               uses: actions/checkout@v4 #uses key word defines the action, v4 is the action version
             - name: setup node
-              uses: actions/setup-node@3
+              uses: actions/setup-node@4
               with:
                 node-version: '20.x' #pass latest node version with key word with
             - name: install dependencies
