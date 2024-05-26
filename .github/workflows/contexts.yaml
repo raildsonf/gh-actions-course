@@ -16,6 +16,8 @@ jobs:
                 echo "Repo ID: ${{ github.repository_id }}"
                 echo "Repo: ${{ github.repository }}"
                 echo "Token: ${{ github.token }}"
+                #compute the short sha string yourself in a previous step
+                echo "SHORT_SHA=`echo ${{ github.sha }} | cut -c1-8`" >> $GITHUB_ENV
             - name: retrieve variable
               run: |
                 echo "Variable value: ${{ vars.CLOUD_CREDS }}"
