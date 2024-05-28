@@ -2,7 +2,7 @@ name: using expressions
 #if debug is set to TRUE, print ON, if not, print OFF
 run-name: using expressions here too | DEGUB - ${{ inputs.debug && 'ON' || 'OFF'}}
 on:
-    push:
+    #push:
     workflow_dispatch:
         inputs:
             debug:

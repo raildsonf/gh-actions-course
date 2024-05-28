@@ -1,0 +1,15 @@
+name: using vars
+on:
+    push:
+    workflow_dispatch:
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: print env vars
+              env:
+                STEP_VAR: "I'm a step var"
+                step-var2: "Another step env var"
+              run: |
+                echo "step env vars: ${{ env.STEP_VAR }}"
+                echo "step env vars: ${{ env.step-var2 }}"
