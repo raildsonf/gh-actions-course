@@ -12,4 +12,4 @@ jobs:
                 step-var2: "Another step env var"
               run: |
                 echo "step env vars: ${{ env.STEP_VAR }}"
-                echo "step env vars: ${{ env.step-var2 }}"
+                echo "step env vars: $step-var2"
