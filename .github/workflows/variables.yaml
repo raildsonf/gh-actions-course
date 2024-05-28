@@ -2,14 +2,23 @@ name: using vars
 on:
     push:
     workflow_dispatch:
+#var available for all jobs and steps
+env:
+    WORKFLOW_VAR: "workflow var is here too"
 jobs:
     echo:
         runs-on: ubuntu-latest
+        #var available to all steps in this job
+        env:
+            JOB_VAR: "Job var present"
         steps:
             - name: print env vars
+              #var available just in this step
               env:
                 STEP_VAR: "I'm a step var"
-                step-var2: "Another step env var"
+                step_var2: "Another step env var"
               run: |
                 echo "step env vars: ${{ env.STEP_VAR }}"
-                echo "step env vars: $step-var2"
+                echo "step env vars: $step_var2"
+                echo "job env vars: ${{ env.JOB_VAR}}"
+                echo "workflow env vars: ${{ env.WORKFLOW_VAR}}"
