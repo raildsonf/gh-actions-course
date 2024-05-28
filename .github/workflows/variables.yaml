@@ -5,20 +5,31 @@ on:
 #var available for all jobs and steps
 env:
     WORKFLOW_VAR: "workflow var is here too"
+    COLLOR: "blue"
 jobs:
     echo:
         runs-on: ubuntu-latest
         #var available to all steps in this job
         env:
             JOB_VAR: "Job var present"
+            COLLOR: "green"
         steps:
             - name: print env vars
               #var available just in this step
               env:
                 STEP_VAR: "I'm a step var"
                 step_var2: "Another step env var"
+                COLLOR: "yellow"
               run: |
                 echo "step env vars: ${{ env.STEP_VAR }}"
                 echo "step env vars: $step_var2"
                 echo "job env vars: ${{ env.JOB_VAR}}"
                 echo "workflow env vars: ${{ env.WORKFLOW_VAR}}"
+                echo "collor: ${{ env.COLLOR}}"
+            - name: which collor?
+              run: echo "collor ${{ env.COLLOR}}"
+    echo2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: new collor
+              run: echo "collor ${{ env.COLLOR}}"
