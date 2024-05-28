@@ -1,6 +1,6 @@
 name: using vars
 on:
-    push:
+    #push:
     workflow_dispatch:
 #var available for all jobs and steps
 env:
