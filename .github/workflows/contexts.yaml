@@ -1,7 +1,7 @@
 name: contexts
 run-name: workflow run name in the UI ${{ github.head_ref }}. Debug ${{ inputs.debug }}
 on:
-    push:
+    #push:
     workflow_dispatch:
         inputs:
             debug:
