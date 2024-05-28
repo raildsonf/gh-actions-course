@@ -1,4 +1,6 @@
 name: using expressions
+#if debug is set to TRUE, print ON, if not, print OFF
+run-name: using expressions here too | DEGUB - ${{ inputs.debug && 'ON' || 'OFF'}}
 on:
     push:
     workflow_dispatch:
@@ -6,6 +8,9 @@ on:
             debug:
                 type: boolean
                 default: false
+#first step will execute just if debug set to true in the UI
+#second step will execute if triggered using ui with debug true AND branch is main
+#third step will execute
 jobs:
     echo:
         runs-on: ubuntu-latest
